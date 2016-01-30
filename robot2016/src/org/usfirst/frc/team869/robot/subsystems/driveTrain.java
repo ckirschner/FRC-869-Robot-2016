@@ -2,6 +2,8 @@ package org.usfirst.frc.team869.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 
+
+
 import org.usfirst.frc.team869.robot.commands.*;
 import org.usfirst.frc.team869.robot.OI;
 import org.usfirst.frc.team869.robot.RobotMap;
@@ -26,11 +28,17 @@ public class driveTrain extends Subsystem {
 	CANTalon talonFrontRight = new CANTalon (RobotMap.rightFrontDriveMotor);
 	CANTalon talonRearRight = new CANTalon (RobotMap.rightRearDriveMotor);
 	
+
+	
+	
 	
 	
 
     public void initDefaultCommand() {
     	
+    	//Set driveWithJoysticks as default command.
+    	//This will make sure when the subsystem is idle (no other commands scheduled) 
+    	//			it will continue to ALWAYS be scheduled with the joystick input.
     	setDefaultCommand(new driveWithJoysticks());
     	
     	
@@ -40,12 +48,16 @@ public class driveTrain extends Subsystem {
     
     public void setTankDrive (double rightSpeed, double leftSpeed){
     	//Set left and right speeds. Invert left value to accommodate motors spinning on the mirrored side.
-    	talonFrontLeft.set(-(leftSpeed));
-    	talonRearLeft.set(-(leftSpeed));
-    	talonFrontRight.set(rightSpeed);
-    	talonRearRight.set(rightSpeed);
+    	talonFrontLeft.set((leftSpeed));
+    	talonRearLeft.set((leftSpeed));
+    	talonFrontRight.set(-rightSpeed);
+    	talonRearRight.set(-rightSpeed);
+    	
+    	System.out.print("running drive train");
     	
     }
+    
+
     
  
     

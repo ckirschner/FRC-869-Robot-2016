@@ -26,7 +26,7 @@ public class driveWithJoysticks extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	Robot.DriveTrain.setTankDrive(OI.getRightDriveSpeed(), OI.getLeftDriveSpeed());
+    	Robot.DriveTrain.setTankDrive((OI.getRightDriveSpeed()), (OI.getLeftDriveSpeed()));
     	
     	
     	

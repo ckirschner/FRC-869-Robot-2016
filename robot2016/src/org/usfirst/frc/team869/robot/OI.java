@@ -3,9 +3,11 @@ package org.usfirst.frc.team869.robot;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.buttons.Button;
-import org.usfirst.frc.team869.robot.commands.ExampleCommand;
+import org.usfirst.frc.team869.robot.commands.shiftDriveSpeed;
+import org.usfirst.frc.team869.robot.commands.*;
 //import edu.wpi.first.wpilibj.vision.USBCamera;
 import edu.wpi.first.wpilibj.CameraServer;
+
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -21,12 +23,38 @@ public class OI {
 	
 	public static Joystick driverController = new Joystick(RobotMap.driverControllerID);
 	public static Joystick operatorController = new Joystick(RobotMap.operatorControllerID);
+	public static JoystickButton joystickButtonA = new JoystickButton(driverController, RobotMap.logitechControllerAbutton);
 	
+	
+	
+	static shiftDriveSpeed shiftHigh = new shiftDriveSpeed();
+	
+	
+	
+	
+	public OI() {
+		
+		joystickButtonA.whenPressed(shiftHigh);
+		
+		//new JoystickButton(driverController, RobotMap.logitechControllerYbutton).whenPressed(new driveShift(RobotMap.logitechControllerYbutton));
+		
+		
+	}
+	
+	
+	
+	
+	
+		
 	//public static USBCamera microSoftCam = new USBCamera("cam0");
 	
+		/*shiftHighSpeed.whenPressed(new driveShift());
 	
-	
-	
+		shiftHighSpeed.whenPressed(new driveShift(RobotMap.driveHighSpeed));
+		shiftHighTorque.whenPressed(new driveShift(RobotMap.driveHighTorque));*/
+		
+		
+		
 	public static double getLeftDriveSpeed(){
 		return driverController.getRawAxis(RobotMap.logitechControllerLYAxis);
 	}

@@ -59,6 +59,9 @@ public class RobotMap {
 	public static int leftRearDriveMotor = 2;
 	public static int rightFrontDriveMotor = 3;
 	public static int rightRearDriveMotor = 4;
+	public static int driveHighSpeed = 0;
+	public static int driveHighTorque = 1;
+	
 	
 	
 	/* 
