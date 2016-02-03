@@ -1,7 +1,4 @@
 package org.usfirst.frc.team869.robot;
-
-
-
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
  * to a variable name. This provides flexibility changing wiring, makes checking
@@ -15,11 +12,6 @@ public class RobotMap {
     // public static int rightMotor = 2;
 	
 	
-	/* 
-	 * Define motors for ball manipulation here
-	 */
-	
-	//Assign controller to operator and driver
 	public static final int driverControllerID = 1;
 
 	public static final int operatorControllerID = 2;
@@ -70,6 +62,7 @@ public class RobotMap {
 	public static int shooterMotor = 5;
 	public static int intakeMotor = 6;
 	public static int ballManageMotor = 7;
+	
 	
 	
     

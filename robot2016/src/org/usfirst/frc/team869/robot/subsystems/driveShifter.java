@@ -26,7 +26,7 @@ public class driveShifter extends Subsystem {
     	
     	speedSolenoid.set(DoubleSolenoid.Value.kForward);
     	
-    	System.out.print("HighSpeed Shift");
+    	//System.out.print("HighSpeed Shift");
     	
     	
     	

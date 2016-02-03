@@ -23,18 +23,21 @@ public class OI {
 	
 	public static Joystick driverController = new Joystick(RobotMap.driverControllerID);
 	public static Joystick operatorController = new Joystick(RobotMap.operatorControllerID);
-	public static JoystickButton joystickButtonA = new JoystickButton(driverController, RobotMap.logitechControllerAbutton);
+	//public static JoystickButton joystickButtonA = new JoystickButton(driverController, RobotMap.logitechControllerAbutton);
 	
 	
 	
-	static shiftDriveSpeed shiftHigh = new shiftDriveSpeed();
+	//public static shiftDriveSpeed shiftHigh = new shiftDriveSpeed();
 	
 	
 	
 	
 	public OI() {
 		
-		joystickButtonA.whenPressed(shiftHigh);
+		//joystickButtonA.whenPressed(shiftHigh);
+		
+		getButton(RobotMap.driverControllerID, RobotMap.logitechControllerAbutton)
+        .whileHeld(new shiftDriveSpeed());
 		
 		//new JoystickButton(driverController, RobotMap.logitechControllerYbutton).whenPressed(new driveShift(RobotMap.logitechControllerYbutton));
 		
@@ -82,5 +85,19 @@ public class OI {
     // Start the command when the button is released  and let it run the command
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
+	
+	
+    public JoystickButton getButton(int joyid, int button) {
+        switch(joyid) {
+            case RobotMap.driverControllerID:
+                return new JoystickButton(driverController, button);
+          /*  case RobotMap.rightJoystick:
+                return new JoystickButton(rightJoy, button);*/
+            case RobotMap.operatorControllerID:
+                return new JoystickButton(operatorController, button);
+            default:
+                return null;
+        }
+    }
 }
 
