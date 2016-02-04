@@ -22,6 +22,8 @@ public class Robot extends IterativeRobot {
 	public static final ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 	public static final driveTrain DriveTrain = new driveTrain();
 	public static final driveShiftSystem DriveShiftSystem = new driveShiftSystem();
+	public static final intakeSubsystem intakeSystem = new intakeSubsystem();
+	public static final shooterSubsystem shooterSystem = new shooterSubsystem();
 	
 	public static OI oi;
 

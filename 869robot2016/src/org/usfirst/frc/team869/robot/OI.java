@@ -21,12 +21,21 @@ public class OI {
 		
 
 		
-		
-		 getButton(RobotMap.driverControllerID, RobotMap.logitechControllerLStickButton).whileHeld(new highSpeedDriveCommand());
+		/*
+		 * Driver Controller Buttons
+		 */
+		 getButton(RobotMap.driverControllerID, RobotMap.driveSpeedButton).whileHeld(new highSpeedDriveCommand());
+		 getButton(RobotMap.driverControllerID, RobotMap.driveTorqueButton).whileHeld(new highTorqueDriveCommand());
+		 
+		 
+		 /*
+		  * Operator controller buttons
+		  */
+		 getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whileHeld(new shootBlindCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whileHeld(new pickUpBallCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whenReleased(new stopIntake());
 
-		 getButton(RobotMap.driverControllerID, RobotMap.logitechControllerRStickButton).whileHeld(new highTorqueDriveCommand());
-		 
-		 
  //getButton(RobotMap.operatorJoystick, 2)
    //      .whileHeld(new AdvanceConveyer());
  

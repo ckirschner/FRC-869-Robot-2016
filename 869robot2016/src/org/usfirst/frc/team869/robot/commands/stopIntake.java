@@ -1,21 +1,20 @@
 package org.usfirst.frc.team869.robot.commands;
 
 import org.usfirst.frc.team869.robot.Robot;
-import org.usfirst.frc.team869.robot.subsystems.driveShiftSystem;
+import org.usfirst.frc.team869.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class highTorqueDriveCommand extends Command {
-	
+public class stopIntake extends Command {
 
-    public highTorqueDriveCommand() {
+    public stopIntake() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	requires(Robot.intakeSystem);
     	
-    	requires(Robot.DriveShiftSystem);
     }
 
     // Called just before this Command runs the first time
@@ -24,8 +23,8 @@ public class highTorqueDriveCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.intakeSystem.setIntakeSpeed(0);
     	
-    	driveShiftSystem.shiftHighTorque();
     }
 
     // Make this return true when this Command no longer needs to run execute()

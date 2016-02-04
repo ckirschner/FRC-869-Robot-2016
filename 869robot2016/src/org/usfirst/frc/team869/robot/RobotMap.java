@@ -20,6 +20,9 @@ public class RobotMap {
 	
 	public static String usbCameraName = "cam0";
 	
+	//***************************************************************************
+	//ACTUAL MAP FOR THE LOGITECH CONTROLLER
+	//******************DO NOT CHANGE THIS***************************************
 	//"Controller Gampad (F310)" Button mapping
 	public static int logitechControllerAbutton = 1;
 	public static int logitechControllerBbutton = 2;
@@ -39,13 +42,14 @@ public class RobotMap {
 	public static int logitechControllerRTrigger = 3;
 	public static int logitechControllerRXAxis = 4;
 	public static int logitechControllerRYAxis = 5;
-	
+	//*****************************************************************************
 	
 	
 	
 	
 	/* 
 	 * Define motors for drive train here
+	 * CANBUS values
 	 */
 	public static int leftFrontDriveMotor = 1;
 	public static int leftRearDriveMotor = 2;
@@ -58,10 +62,35 @@ public class RobotMap {
 	
 	/* 
 	 * Define motors for ball manipulation here
+	 * CANBUS values
 	 */
 	public static int shooterMotor = 5;
 	public static int intakeMotor = 6;
 	public static int ballManageMotor = 7;
+	
+	/*
+	 * Assign the joystick button names to more meaningful names
+	 * used to make code easier to understand in OI class
+	 */
+	
+	/*
+	 * Operator buttons
+	 */
+	public static int shootBlindButton = logitechControllerXbutton;
+	public static int intakeButton = logitechControllerYbutton;
+	
+	/*
+	 * Driver buttons
+	 */
+	public static int driveTorqueButton = logitechControllerLStickButton;
+	public static int driveSpeedButton = logitechControllerRStickButton;
+	
+	/*
+	 * Set all static motor speed values here
+	 */
+	public static double constantShooterSpeed = .9 ;
+	public static double constantIntakeSpeed = .5 ;
+	
 	
 	
 	
