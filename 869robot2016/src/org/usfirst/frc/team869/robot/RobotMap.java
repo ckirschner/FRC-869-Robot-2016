@@ -88,7 +88,7 @@ public class RobotMap {
 	/*
 	 * Set all static motor speed values here
 	 */
-	public static double constantShooterSpeed = .9 ;
+	public static double constantShooterSpeed = 1 ;
 	public static double constantIntakeSpeed = .5 ;
 	
 	

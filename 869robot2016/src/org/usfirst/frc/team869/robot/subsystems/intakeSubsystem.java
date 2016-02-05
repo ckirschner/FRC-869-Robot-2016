@@ -2,8 +2,10 @@ package org.usfirst.frc.team869.robot.subsystems;
 
 import org.usfirst.frc.team869.robot.RobotMap;
 
+
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import org.usfirst.frc.team869.robot.commands.stopIntake;
 
 /**
  *
@@ -22,6 +24,9 @@ public class intakeSubsystem extends Subsystem {
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    	
+    	setDefaultCommand(new stopIntake());
+    	
     }
 
     public void setIntakeSpeed (double intakeSpeed){

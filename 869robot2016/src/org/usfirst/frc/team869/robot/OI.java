@@ -33,8 +33,8 @@ public class OI {
 		  */
 		 getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whileHeld(new shootBlindCommand());
 		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whileHeld(new pickUpBallCommand());
-		 getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());
-		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whenReleased(new stopIntake());
+		/* getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whenReleased(new stopIntake());*/
 
  //getButton(RobotMap.operatorJoystick, 2)
    //      .whileHeld(new AdvanceConveyer());
