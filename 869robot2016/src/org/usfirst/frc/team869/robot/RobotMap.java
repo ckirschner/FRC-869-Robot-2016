@@ -57,6 +57,8 @@ public class RobotMap {
 	public static int rightRearDriveMotor = 4;
 	public static int driveHighSpeed = 0;
 	public static int driveHighTorque = 1;
+	public static int gyroInput = 0;
+	
 	
 	
 	

@@ -8,7 +8,10 @@ import org.usfirst.frc.team869.robot.commands.*;
 import org.usfirst.frc.team869.robot.OI;
 import org.usfirst.frc.team869.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.CANTalon;;
+import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.AnalogGyro;
+import edu.wpi.first.wpilibj.AnalogInput;
+
 
 
 //import org.usfirst.frc.team869.robot.commands.driveWithJoysticks;
@@ -27,6 +30,11 @@ public class driveTrain extends Subsystem {
 	CANTalon talonRearLeft = new CANTalon (RobotMap.leftRearDriveMotor);
 	CANTalon talonFrontRight = new CANTalon (RobotMap.rightFrontDriveMotor);
 	CANTalon talonRearRight = new CANTalon (RobotMap.rightRearDriveMotor);
+	
+	AnalogInput gyroInput = new AnalogInput (RobotMap.gyroInput);
+	AnalogGyro driveGyro = new AnalogGyro (gyroInput);
+	
+	
 	
 
 	
@@ -54,6 +62,22 @@ public class driveTrain extends Subsystem {
     	talonRearRight.set(-rightSpeed);
     	
     	System.out.print("running drive train");
+    	
+    }
+    
+    
+    public void resetGyro (){
+    	driveGyro.reset();
+    }
+    
+    public void getGyroAngle (){
+    	
+    	
+    	driveGyro.getAngle();
+    	
+    	
+    	System.out.print(driveGyro.getAngle());
+    	
     	
     }
     
