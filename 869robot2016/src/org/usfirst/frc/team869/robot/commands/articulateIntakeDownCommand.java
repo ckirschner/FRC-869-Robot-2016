@@ -5,9 +5,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class ClimbExtendCommand extends Command {
+public class articulateIntakeDownCommand extends Command {
 
-    public ClimbExtendCommand() {
+    public articulateIntakeDownCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }

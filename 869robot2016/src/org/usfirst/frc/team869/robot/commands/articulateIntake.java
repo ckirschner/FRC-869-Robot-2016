@@ -1,7 +1,6 @@
 package org.usfirst.frc.team869.robot.commands;
 
 import org.usfirst.frc.team869.robot.Robot;
-import org.usfirst.frc.team869.robot.OI;
 
 import edu.wpi.first.wpilibj.command.Command;
 
@@ -9,15 +8,10 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class articulateIntake extends Command {
-	
-	public String intake;
-	
 
-    public articulateIntake() {
+    public articulateIntake(String location) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    
-    	
     	
     	
     	//public String intakeLocation = location;
@@ -35,23 +29,9 @@ public class articulateIntake extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	
-    	if (OI.getOperatorLeftJoy() >= .75){
-    		Robot.intakeArticulation.articulateIntakeDown();
-    		intake = "down";
-    	} else if (OI.getOperatorLeftJoy() < -.75){
-    		Robot.intakeArticulation.articulateIntakeUp();
-    		intake = "up";
+    	/*if (intakeLocation == "up"){
     		
-    	} else {
-    		if (intake == "down"){
-    			Robot.intakeArticulation.articulateIntakeOff();
-    		} else{
-    			Robot.intakeArticulation.articulateIntakeUp();
-    		}
-    	}
-    	
-    
+    	}*/
     }
 
     // Make this return true when this Command no longer needs to run execute()

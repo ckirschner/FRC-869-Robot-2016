@@ -64,8 +64,7 @@ public class driveTrain extends Subsystem {
     	talonFrontRight.set(-rightSpeed);
     	talonRearRight.set(-rightSpeed);
     	
-    	System.out.print("running drive train: left speed:" + leftSpeed + " right speed:" + -rightSpeed);
-    	
+    	System.out.print("running drive train");
     	
     }
     

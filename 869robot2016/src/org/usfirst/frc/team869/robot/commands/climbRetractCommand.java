@@ -1,7 +1,5 @@
 package org.usfirst.frc.team869.robot.commands;
 
-import org.usfirst.frc.team869.robot.Robot;
-
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
@@ -12,8 +10,6 @@ public class ClimbRetractCommand extends Command {
     public ClimbRetractCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	
-     	requires(Robot.climberSystem);
     }
 
     // Called just before this Command runs the first time
@@ -22,8 +18,6 @@ public class ClimbRetractCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	
-    	Robot.climberSystem.climbRetract();
     }
 
     // Make this return true when this Command no longer needs to run execute()
