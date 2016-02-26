@@ -5,7 +5,13 @@ import org.usfirst.frc.team869.robot.RobotMap;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.usfirst.frc.team869.robot.commands.ArticulateIntakeCommand;
+=======
+import org.usfirst.frc.team869.robot.commands.articulateIntakeDownCommand;
+import org.usfirst.frc.team869.robot.commands.articulateIntakeUpCommand;
+import org.usfirst.frc.team869.robot.commands.articulateIntakeOffCommand;
+>>>>>>> parent of a60b4fc... finished most commands and all subsystems
 =======
 import org.usfirst.frc.team869.robot.commands.articulateIntakeDownCommand;
 import org.usfirst.frc.team869.robot.commands.articulateIntakeUpCommand;
@@ -30,9 +36,12 @@ public class IntakeArticulationSubsystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     	setDefaultCommand(new ArticulateIntakeCommand());
     	
+=======
+>>>>>>> parent of a60b4fc... finished most commands and all subsystems
 =======
 >>>>>>> parent of a60b4fc... finished most commands and all subsystems
     	
