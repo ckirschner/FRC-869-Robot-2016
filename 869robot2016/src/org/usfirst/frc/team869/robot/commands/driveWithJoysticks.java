@@ -10,11 +10,11 @@ import org.usfirst.frc.team869.robot.Robot;
 /**
  *
  */
-public class driveWithJoysticks extends Command {
+public class DriveWithJoysticks extends Command {
 	
 	
 
-    public driveWithJoysticks() {
+    public DriveWithJoysticks() {
     	requires(Robot.DriveTrain);
     	
         // Use requires() here to declare subsystem dependencies

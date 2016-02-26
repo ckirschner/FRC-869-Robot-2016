@@ -7,9 +7,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class climbRetractCommand extends Command {
+public class ClimbRetractCommand extends Command {
 
-    public climbRetractCommand() {
+    public ClimbRetractCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	
