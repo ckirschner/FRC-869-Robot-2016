@@ -4,16 +4,16 @@ import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 import org.usfirst.frc.team869.robot.Robot;
-import org.usfirst.frc.team869.robot.subsystems.DriveShiftSubsystem;
+import org.usfirst.frc.team869.robot.subsystems.driveShiftSystem;
 
 /**
  *
  */
-public class HighSpeedDriveCommand extends Command {
+public class highSpeedDriveCommand extends Command {
 	
 	
 
-    public HighSpeedDriveCommand() {
+    public highSpeedDriveCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	
@@ -28,7 +28,7 @@ public class HighSpeedDriveCommand extends Command {
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
     	
-    	DriveShiftSubsystem.shiftHighSpeed();
+    	driveShiftSystem.shiftHighSpeed();
     	
     }
 

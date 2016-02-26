@@ -2,7 +2,7 @@ package org.usfirst.frc.team869.robot.commands;
 
 import org.usfirst.frc.team869.robot.Robot;
 import org.usfirst.frc.team869.robot.RobotMap;
-import org.usfirst.frc.team869.robot.subsystems.DriveShiftSubsystem;
+import org.usfirst.frc.team869.robot.subsystems.driveShiftSystem;
 
 import edu.wpi.first.wpilibj.command.Command;
 //import org.usfirst.frc.team869.robot.subsystems.intakeSubsystem;
@@ -10,9 +10,9 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class PickUpBallCommand extends Command {
+public class pickUpBallCommand extends Command {
 
-    public PickUpBallCommand() {
+    public pickUpBallCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	

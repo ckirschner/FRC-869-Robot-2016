@@ -4,12 +4,12 @@ import org.usfirst.frc.team869.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc.team869.robot.commands.ArticulateIntakeCommand;
+import org.usfirst.frc.team869.robot.commands.articulateIntake;
 
 /**
  *
  */
-public class IntakeArticulationSubsystem extends Subsystem {
+public class intakeArticulationSubsystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -23,7 +23,7 @@ public class IntakeArticulationSubsystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
 
-    	setDefaultCommand(new ArticulateIntakeCommand());
+    	setDefaultCommand(new articulateIntake());
     	
     	
     	

@@ -2,7 +2,7 @@ package org.usfirst.frc.team869.robot.subsystems;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
 import org.usfirst.frc.team869.robot.*;
-import org.usfirst.frc.team869.robot.commands.ClimbRetractCommand;
+import org.usfirst.frc.team869.robot.commands.climbRetractCommand;
 
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
@@ -10,7 +10,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 /**
  *
  */
-public class ClimberSubsystem extends Subsystem {
+public class climberSubsystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -23,7 +23,7 @@ public class ClimberSubsystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     	
-    	setDefaultCommand(new ClimbRetractCommand());
+    	setDefaultCommand(new climbRetractCommand());
     	
     }
     
