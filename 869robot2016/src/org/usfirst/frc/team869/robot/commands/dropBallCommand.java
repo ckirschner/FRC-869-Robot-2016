@@ -9,9 +9,9 @@ import org.usfirst.frc.team869.robot.RobotMap;
 /**
  *
  */
-public class dropBallCommand extends Command {
+public class DropBallCommand extends Command {
 
-    public dropBallCommand() {
+    public DropBallCommand() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	
