@@ -21,7 +21,7 @@ import edu.wpi.first.wpilibj.networktables.*;
 /**
  *
  */
-public class driveTrain extends Subsystem {
+public class DrivetrainSubsystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -50,7 +50,7 @@ public class driveTrain extends Subsystem {
     	//Set driveWithJoysticks as default command.
     	//This will make sure when the subsystem is idle (no other commands scheduled) 
     	//			it will continue to ALWAYS be scheduled with the joystick input.
-    	setDefaultCommand(new driveWithJoysticks());
+    	setDefaultCommand(new DriveWithJoysticks());
     	
     	
         // Set the default command for a subsystem here.
