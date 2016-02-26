@@ -7,7 +7,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 /**
  *
  */
-public class DriveShiftSubsystem extends Subsystem {
+public class driveShiftSystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.

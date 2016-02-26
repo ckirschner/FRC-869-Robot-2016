@@ -15,7 +15,6 @@ public class OI {
     private static final Joystick driverController = new Joystick(RobotMap.driverControllerID);
     private static final Joystick operatorController = new Joystick(RobotMap.operatorControllerID);
 	
-    public boolean buttonOn = false;
     
     
 	public OI(){
@@ -25,20 +24,16 @@ public class OI {
 		/*
 		 * Driver Controller Buttons
 		 */
-		 getButton(RobotMap.driverControllerID, RobotMap.driveSpeedButton).whileHeld(new HighSpeedDriveCommand());
-		 getButton(RobotMap.driverControllerID, RobotMap.driveTorqueButton).whileHeld(new HighTorqueDriveCommand());
+		 getButton(RobotMap.driverControllerID, RobotMap.driveSpeedButton).whileHeld(new highSpeedDriveCommand());
+		 getButton(RobotMap.driverControllerID, RobotMap.driveTorqueButton).whileHeld(new highTorqueDriveCommand());
 		 
 		 
 		 /*
 		  * Operator controller buttons
 		  */
-		 getButton(RobotMap.operatorControllerID, RobotMap.shootButton).whileHeld(new ShootCommand());
-		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonIn).whileHeld(new PickUpBallCommand());
-		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonOut).whileHeld(new DropBallCommand());
-		 
-		 if (getButton(RobotMap.operatorControllerID, RobotMap.climbButton1).get()){
-			 getButton(RobotMap.operatorControllerID, RobotMap.climbButton2).whileHeld(new ClimbExtendCommand());
-		 }
+		 getButton(RobotMap.operatorControllerID, RobotMap.shootButton).whileHeld(new shootBlindCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonIn).whileHeld(new pickUpBallCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonOut).whileHeld(new dropBallCommand());
 		 
 			 
 		/* getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());

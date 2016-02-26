@@ -8,12 +8,12 @@ import edu.wpi.first.wpilibj.command.Command;
 /**
  *
  */
-public class StopShootCommand extends Command {
+public class stopIntake extends Command {
 
-    public StopShootCommand() {
+    public stopIntake() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-    	requires(Robot.shooterSystem);
+    	requires(Robot.intakeSystem);
     	
     }
 
@@ -23,7 +23,8 @@ public class StopShootCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.shooterSystem.setShooterSpeed(0);
+    	Robot.intakeSystem.setIntakeSpeed(0);
+    	
     }
 
     // Make this return true when this Command no longer needs to run execute()
