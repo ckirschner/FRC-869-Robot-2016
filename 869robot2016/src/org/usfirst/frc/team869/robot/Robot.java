@@ -24,6 +24,8 @@ public class Robot extends IterativeRobot {
 	public static final driveShiftSystem DriveShiftSystem = new driveShiftSystem();
 	public static final intakeSubsystem intakeSystem = new intakeSubsystem();
 	public static final shooterSubsystem shooterSystem = new shooterSubsystem();
+	public static final intakeArticulationSubsystem intakeArticulation = new intakeArticulationSubsystem();
+	public static final climberSubsystem climberSystem = new climberSubsystem();
 	
 	public static OI oi;
 

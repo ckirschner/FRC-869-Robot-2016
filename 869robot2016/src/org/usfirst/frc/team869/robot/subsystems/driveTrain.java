@@ -12,6 +12,8 @@ import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.AnalogGyro;
 import edu.wpi.first.wpilibj.AnalogInput;
 
+import edu.wpi.first.wpilibj.networktables.*;
+
 
 
 //import org.usfirst.frc.team869.robot.commands.driveWithJoysticks;
@@ -33,6 +35,7 @@ public class driveTrain extends Subsystem {
 	
 	AnalogInput gyroInput = new AnalogInput (RobotMap.gyroInput);
 	AnalogGyro driveGyro = new AnalogGyro (gyroInput);
+	
 	
 	
 	
@@ -68,6 +71,7 @@ public class driveTrain extends Subsystem {
     
     public void resetGyro (){
     	driveGyro.reset();
+    	
     }
     
     public void getGyroAngle (){
@@ -77,6 +81,16 @@ public class driveTrain extends Subsystem {
     	
     	
     	System.out.print(driveGyro.getAngle());
+    	
+    	
+    }
+    
+    
+    public void getGoalLocation (){
+    	
+    	NetworkTable.getTable("GRIP/StrongholdContours");
+    	
+    	
     	
     	
     }

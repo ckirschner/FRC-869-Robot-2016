@@ -31,8 +31,11 @@ public class OI {
 		 /*
 		  * Operator controller buttons
 		  */
-		 getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whileHeld(new shootBlindCommand());
-		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whileHeld(new pickUpBallCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.shootButton).whileHeld(new shootBlindCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonIn).whileHeld(new pickUpBallCommand());
+		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonOut).whileHeld(new dropBallCommand());
+		 
+			 
 		/* getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());
 		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButton).whenReleased(new stopIntake());*/
 
@@ -67,6 +70,10 @@ public class OI {
     // until it is finished as determined by it's isFinished method.
     // button.whenReleased(new ExampleCommand());
 	
+	public static double getOperatorLeftJoy(){
+		return operatorController.getRawAxis(RobotMap.logitechControllerLYAxis);
+	}
+
 	public static double getLeftDriveSpeed(){
 		return driverController.getRawAxis(RobotMap.logitechControllerLYAxis);
 	}
