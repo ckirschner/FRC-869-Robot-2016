@@ -5,12 +5,12 @@ import org.usfirst.frc.team869.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.CANTalon;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import org.usfirst.frc.team869.robot.commands.StopShootCommand;
+import org.usfirst.frc.team869.robot.commands.stopShoot;
 
 /**
  *
  */
-public class ShooterSubsystem extends Subsystem {
+public class shooterSubsystem extends Subsystem {
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
@@ -21,7 +21,7 @@ public class ShooterSubsystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     	
-    	setDefaultCommand(new StopShootCommand());
+    	setDefaultCommand(new stopShoot());
     	
     }
     public void setShooterSpeed (double shooterSpeed){
