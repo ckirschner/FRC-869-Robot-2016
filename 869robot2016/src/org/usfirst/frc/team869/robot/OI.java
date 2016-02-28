@@ -1,7 +1,7 @@
 package org.usfirst.frc.team869.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.buttons.Button;
+//import edu.wpi.first.wpilibj.buttons.Button;
 import org.usfirst.frc.team869.robot.commands.*;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -24,8 +24,8 @@ public class OI {
 		/*
 		 * Driver Controller Buttons
 		 */
-		 getButton(RobotMap.driverControllerID, RobotMap.driveSpeedButton).whileHeld(new highSpeedDriveCommand());
-		 getButton(RobotMap.driverControllerID, RobotMap.driveTorqueButton).whileHeld(new highTorqueDriveCommand());
+		 getButton(RobotMap.driverControllerID, RobotMap.driveSpeedButton).whileHeld(new shiftDriveCommand("HighSpeed"));
+		 getButton(RobotMap.driverControllerID, RobotMap.driveTorqueButton).whileHeld(new shiftDriveCommand("LowSpeed"));
 		 
 		 
 		 /*
@@ -34,6 +34,14 @@ public class OI {
 		 getButton(RobotMap.operatorControllerID, RobotMap.shootButton).whileHeld(new shootBlindCommand());
 		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonIn).whileHeld(new pickUpBallCommand());
 		 getButton(RobotMap.operatorControllerID, RobotMap.intakeButtonOut).whileHeld(new dropBallCommand());
+		 //Retract climber if either button is released
+		// getButton(RobotMap.operatorControllerID, RobotMap.climbButton1).whenReleased(new climbRetractCommand());
+		// getButton(RobotMap.operatorControllerID, RobotMap.climbButton2).whenReleased(new climbRetractCommand());
+		 //Extend Climber
+		 if (getButton(RobotMap.operatorControllerID, RobotMap.climbButton1).get()){
+			 getButton(RobotMap.operatorControllerID, RobotMap.climbButton2).whileHeld(new climbExtendCommand());
+			 
+		 }
 		 
 			 
 		/* getButton(RobotMap.operatorControllerID, RobotMap.shootBlindButton).whenReleased(new stopShoot());

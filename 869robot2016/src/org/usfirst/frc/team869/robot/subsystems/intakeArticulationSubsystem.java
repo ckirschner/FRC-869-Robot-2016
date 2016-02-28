@@ -25,17 +25,17 @@ public class intakeArticulationSubsystem extends Subsystem {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
 
-    	//setDefaultCommand(new articulateIntake());
+    	setDefaultCommand(new articulateIntake());
     	
     	
     	
     	//Make sure to only set the doublesolenoid to off if the last position of the intake was down
-    	if (downPosition == 1){
+    	/*if (downPosition == 1){
     		setDefaultCommand(new articulateIntake("down"));
     	} else {
     		setDefaultCommand(new articulateIntake("up"));
     		
-    	}
+    	}*/
     }
     
     public static void articulateIntakeDown (){

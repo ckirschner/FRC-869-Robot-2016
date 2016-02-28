@@ -1,23 +1,50 @@
 package org.usfirst.frc.team869.robot.commands;
 
+//import org.usfirst.frc.team869.robot.OI;
+import org.usfirst.frc.team869.robot.Robot;
+import org.usfirst.frc.team869.robot.subsystems.driveShiftSystem;
+
 import edu.wpi.first.wpilibj.command.Command;
 
 /**
  *
  */
-public class articulateIntakeUpCommand extends Command {
+public class shiftDriveCommand extends Command {
+	public String nextGear;
+	
 
-    public articulateIntakeUpCommand() {
+    public shiftDriveCommand(String gear) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	
+    	nextGear = gear;
+    	
+    	
+    	requires(Robot.DriveShiftSystem);
+   
+    	
+    	
+    	
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	
+    	//nextGear = "HighSpeed";
+    	
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	
+    	
+    	if (nextGear == "HighSpeed"){
+    		driveShiftSystem.shiftHighSpeed();
+    	} else if (nextGear == "LowSpeed") {
+    		driveShiftSystem.shiftHighTorque();
+    	} else {
+    		
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
